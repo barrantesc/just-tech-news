@@ -15,6 +15,6 @@ app.use(routes);
 // changing force to true will connect database to sync with model definitions and associations
 // forcing to true will make tables re-create if there are any association changes. 
 // true only t test if user tables drop, switch back to false
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true}).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
